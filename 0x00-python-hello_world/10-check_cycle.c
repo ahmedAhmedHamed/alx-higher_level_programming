@@ -7,8 +7,6 @@
  */
 int check_cycle(listint_t *head)
 {
-	int i = 0;
-	int j;
 	listint_t *temp;
 
 	if (head != NULL)
