@@ -7,15 +7,17 @@
  */
 int check_cycle(listint_t *head)
 {
-	listint_t *temp;
-
-	if (head != NULL)
-		temp = head->next;
-	while (temp != NULL)
+	int i = 0;
+	int j;
+	listint_t *list[1000];
+	while (head != NULL)
 	{
-		if (head == temp)
-			return (1);
-		temp = temp->next;
+		list[i] = head;
+		for (j = 0; j < i; j++)
+			if (head == list[j])
+				return (1);
+		i++;
+		head = head->next;
 	}
 	return (0);
 }
