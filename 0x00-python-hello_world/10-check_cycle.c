@@ -9,15 +9,15 @@ int check_cycle(listint_t *head)
 {
 	int i = 0;
 	int j;
-	listint_t *list[1000];
-	while (head != NULL)
+	listint_t *temp;
+
+	if (head != NULL)
+		temp = head->next;
+	while (temp != NULL)
 	{
-		list[i] = head;
-		for (j = 0; j < i; j++)
-			if (head == list[j])
-				return (1);
-		i++;
-		head = head->next;
+		if (head == temp)
+			return (1);
+		temp = temp->next;
 	}
 	return (0);
 }
