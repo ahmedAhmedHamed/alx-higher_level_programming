@@ -9,10 +9,6 @@ def fizzbuzz():
             flag = 1
             print("Buzz", end="")
         if flag:
-            if i != 100:
-                print(" ", end="")
-            else:
-                print("")
-                break
+            print(" ", end="")
             continue
         print(f"{i} ", end="")
