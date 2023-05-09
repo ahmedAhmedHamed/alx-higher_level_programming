@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe3d7151-6b0c-4e24-8fe2-ad9dc699e940" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/5-print_comb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6-print_comb3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683637951960</updated>
-      <workItem from="1683637953905" duration="2476000" />
+      <workItem from="1683637953905" duration="3233000" />
     </task>
     <servers />
   </component>
@@ -65,7 +65,8 @@
     <SUITE FILE_PATH="coverage/0x01_python_if_else_loops_functions$2_print_alphabet.coverage" NAME="2-print_alphabet Coverage Results" MODIFIED="1683639152664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/0x01_python_if_else_loops_functions$4_print_hexa.coverage" NAME="4-print_hexa Coverage Results" MODIFIED="1683639508029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/0x01_python_if_else_loops_functions$3_print_alphabt.coverage" NAME="3-print_alphabt Coverage Results" MODIFIED="1683639356613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/0x01_python_if_else_loops_functions$5_print_comb2.coverage" NAME="5-print_comb2 Coverage Results" MODIFIED="1683639924420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/0x01_python_if_else_loops_functions$5_print_comb2.coverage" NAME="5-print_comb2 Coverage Results" MODIFIED="1683640697623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/0x01_python_if_else_loops_functions$1_last_digit.coverage" NAME="1-last_digit Coverage Results" MODIFIED="1683638765748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/0x01_python_if_else_loops_functions$6_print_comb3.coverage" NAME="6-print_comb3 Coverage Results" MODIFIED="1683641167890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
