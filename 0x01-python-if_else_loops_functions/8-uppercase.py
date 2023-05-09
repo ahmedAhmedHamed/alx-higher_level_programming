@@ -6,6 +6,6 @@ def islower(c):
 def uppercase(str):
     for character in str:
         if islower(character):
-            print("{}".format(chr(ord(character) - 32)))
+            print("{}".format(chr(ord(character) - 32)), end="")
         else:
-            print("{}".format(character), end="")
+            print("{}".format(character))
