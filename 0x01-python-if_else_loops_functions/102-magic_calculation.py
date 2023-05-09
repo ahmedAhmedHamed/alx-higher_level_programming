@@ -4,12 +4,10 @@ import dis
 
 def magic_calculation(a, b, c):
     if a < b:
-        if c > b:
-            a = a * b
-            a = a - c
-            return a
-        else:
-            a = a + b
-            return a
-    else:
         return c
+    if c > b:
+        a = a + b
+        return a
+    a = a * b
+    a = a - c
+    return a
