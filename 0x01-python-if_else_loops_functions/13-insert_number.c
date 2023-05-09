@@ -10,6 +10,13 @@ listint_t *insert_node(listint_t **head, int number)
 		free(newList);
 		return (NULL);
 	}
+	newList->next = NULL;
+	newList->n = number;
+	if (*head == NULL)
+	{
+		*head = newList;
+		return (newList);
+	}
 
 	while (temp->next != NULL)
 	{
@@ -17,11 +24,16 @@ listint_t *insert_node(listint_t **head, int number)
 			break;
 		temp = (temp)->next;
 	}
-
-	newList->next = temp->next;
-
-	temp->next = newList;
-	temp->next->n = number;
-
-	return (temp->next);
+	if (temp != *head)
+	{
+		newList->next = temp->next;
+		temp->next = newList;
+		return (temp->next);
+	}
+	else
+	{
+		newList->next = *head;
+		*head = newList;
+		return (newList);
+	}
 }
