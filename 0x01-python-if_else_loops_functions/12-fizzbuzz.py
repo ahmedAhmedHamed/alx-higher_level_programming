@@ -13,6 +13,6 @@ def fizzbuzz():
                 print(" ", end="")
             else:
                 print("")
+                break
             continue
         print(f"{i} ", end="")
-    print("")
