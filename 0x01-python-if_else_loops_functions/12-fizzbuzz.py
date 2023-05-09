@@ -16,5 +16,3 @@ def fizzbuzz():
                 break
             continue
         print(f"{i} ", end="")
-
-fizzbuzz()
