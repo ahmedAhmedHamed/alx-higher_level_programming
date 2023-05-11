@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from hidden_4.py import *
+import hidden_4
 
-for item in dir():
+for item in dir(hidden_4):
     if not item.startswith("__"):
         print(f"{item}")
 
