@@ -10,3 +10,7 @@ else:
 
 for idx, argument in enumerate(argv, 1):
     print(f"{idx}: {argument}")
+
+
+if __name__ == '__main__':
+    pass
