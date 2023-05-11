@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-from add_0 import add as edd
+import add_0 as ewew
 
 
 def add(a, b):
-    print("{} + {} = {}".format(a, b, edd(a, b)))
+    print("{} + {} = {}".format(a, b, ewew.add(a, b)))
 
 
 a = 1
