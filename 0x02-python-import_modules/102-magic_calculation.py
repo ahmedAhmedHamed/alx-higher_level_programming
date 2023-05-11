@@ -3,11 +3,8 @@ def magic_calculation(a, b):
     from magic_calculation_102 import add, sub
     if a < b:
         c = add(a, b)
-        for i in range(3, 4, 6):
+        for i in range(4, 6):
             c = add(c, i)
         return c
 
-    sub(a, b)
-
-import dis
-dis.dis(magic_calculation)
+    return sub(a, b)
