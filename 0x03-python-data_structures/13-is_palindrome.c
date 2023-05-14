@@ -13,25 +13,21 @@ int wrapper(listint_t *head, listint_t *headTwo, int depth) {
     }
     if (headTwo != NULL)
         p1 = headTwo->next;
-    else if (headTwo == NULL)
+    else
         p1 = head->next;
+    reverseDepth = wrapper(head, p1, depth + 1);
+    if (reverseDepth == -1)
+        return (-1);
+    if (reverseDepth == -5)
+        return (-5);
+    if (reverseDepth <= depth)
+        return (-5);
+    while (head != NULL && reverseDepth--)
+        head = head->next;
+    if (head->n != headTwo->n)
+        return (-1);
 
-    else {
-
-        reverseDepth = wrapper(head, p1, depth + 1);
-        if (reverseDepth == -1)
-            return (-1);
-        if (reverseDepth == -5)
-            return (-5);
-        if (reverseDepth <= depth)
-            return (-5);
-        while (head != NULL && reverseDepth--)
-            head = head->next;
-        if (head->n != headTwo->n)
-            return (-1);
-
-        return (1 + reverseDepth);
-    }
+    return (1 + reverseDepth);
 }
 
 int is_palindrome(listint_t **head)
