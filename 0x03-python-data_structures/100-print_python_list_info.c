@@ -19,9 +19,3 @@ void print_python_list_info(PyObject *p)
 		i++;
 	}
 }
-
-int main (void)
-{
-
-    return (0);
-}
