@@ -14,7 +14,7 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Allocated = %d\n", e);
 	while (i < s)
 	{
-		tempObj = PyList_GET_ITEM(p, i);
+		tempObj = PyList_GET_ITEM((PyListObject *) p, i);
 		printf("Element %d: %s\n", i, tempObj->ob_type->tp_name);
 		i++;
 	}
