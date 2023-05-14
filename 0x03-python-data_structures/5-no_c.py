@@ -7,5 +7,6 @@ def no_c(my_string):
         if newString[j] == "c" or newString[j] == "C":
             newString.pop(j)
             i = i - 1
+            continue
         j = j + 1
     return "".join(newString)
