@@ -3,12 +3,11 @@
 int wrapper(listint_t *head, listint_t *headTwo, int depth) {
     listint_t *p1;
     int reverseDepth;
+    int tempReverseDepth;
 
     if (headTwo != NULL && headTwo->next == NULL) {
         if (head->n == headTwo->n)
-        {
             return (1);
-        }
         return (-1);
     }
     if (headTwo != NULL)
@@ -20,9 +19,10 @@ int wrapper(listint_t *head, listint_t *headTwo, int depth) {
         return (-1);
     if (reverseDepth == -5)
         return (-5);
-    if (reverseDepth <= depth)
+    if (reverseDepth >= depth)
         return (-5);
-    while (head != NULL && reverseDepth--)
+    tempReverseDepth = reverseDepth;
+    while (head != NULL && tempReverseDepth--)
         head = head->next;
     if (head->n != headTwo->n)
         return (-1);
