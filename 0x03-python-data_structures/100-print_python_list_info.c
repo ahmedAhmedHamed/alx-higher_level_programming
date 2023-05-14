@@ -8,7 +8,7 @@ void print_python_list_info(PyObject *p)
 	int i = 0;
 	PyListObject *casted = (PyListObject *) p;
 	int s = Py_SIZE(casted);/*list size*/
-	int e = PyList_Size(casted);
+	int e = PyList_Size(p);
 	PyObject *tempObj;
 
 	printf("[*] Size of the Python List = %d\n", s);
