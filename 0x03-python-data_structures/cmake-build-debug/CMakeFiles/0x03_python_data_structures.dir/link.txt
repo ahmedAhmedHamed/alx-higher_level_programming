@@ -1,0 +1,1 @@
+/usr/bin/cc -g "CMakeFiles/0x03_python_data_structures.dir/100-print_python_list_info.c.o" -o 0x03_python_data_structures 
