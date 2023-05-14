@@ -1,0 +1,3 @@
+/home/vboxuser/alx-higher_level_programming/0x03-python-data_structures/cmake-build-debug/CMakeFiles/0x03_python_data_structures.dir
+/home/vboxuser/alx-higher_level_programming/0x03-python-data_structures/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vboxuser/alx-higher_level_programming/0x03-python-data_structures/cmake-build-debug/CMakeFiles/rebuild_cache.dir
