@@ -3,7 +3,7 @@ def roman_to_int(roman_string):
     flag = 0
     number = 0
 
-    if not roman_string:
+    if not roman_string or type(roman_string) != str:
         return 0
 
     for i in range(len(roman_string) - 1, -1, -1):
