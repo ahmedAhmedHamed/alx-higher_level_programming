@@ -3,6 +3,9 @@ def roman_to_int(roman_string):
     flag = 0
     number = 0
 
+    if not roman_string:
+        return 0
+
     for i in range(len(roman_string) - 1, -1, -1):
         if roman_string[i] == 'I':
             number += 1
@@ -26,4 +29,6 @@ def roman_to_int(roman_string):
         elif roman_string[i] == 'M':
             number += 1000
             flag = 1
+        else:
+            return 0
     return number
