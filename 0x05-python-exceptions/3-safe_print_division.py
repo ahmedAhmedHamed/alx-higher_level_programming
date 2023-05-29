@@ -3,10 +3,10 @@ def safe_print_division(a, b):
     division_value = 0
     try:
         if b == 0:
-            raise Exception("divide by zero")
+            raise ValueError("divide by zero")
         division_value = a / b
-    except:
-        return None
+    except ValueError:
+        pass
     finally:
         print("Inside result: {}".format(division_value))
     return division_value
