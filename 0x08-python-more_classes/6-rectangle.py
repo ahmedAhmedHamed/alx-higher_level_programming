@@ -12,7 +12,7 @@ class Rectangle:
         self.__exception_raiser(height, "height")
         self.__width = width
         self.__height = height
-        self.__number_of_instances += 1
+        self.number_of_instances += 1
 
     @property
     def width(self):
@@ -59,7 +59,7 @@ class Rectangle:
         return rectangle
 
     def __del__(self):
-        self.__number_of_instances -= 1
+        self.number_of_instances -= 1
         print("Bye rectangle...")
 
     def zero_checker(self):
