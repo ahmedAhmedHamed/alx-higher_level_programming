@@ -54,10 +54,10 @@ def placeable(row, col, board, n):
 
 if __name__ == "__main__":
 
-    if len(sys.argv) != 1:
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
         exit(1)
-    n = sys.argv[0]
+    n = int(sys.argv[1])
 
     if not isinstance(n, int):
         print("N must be a number")
