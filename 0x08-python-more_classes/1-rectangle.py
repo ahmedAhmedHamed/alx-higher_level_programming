@@ -26,7 +26,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         self.__exception_raiser(value, "height")
-        self.__width = value
+        self.__height = value
 
     def __exception_raiser(self, value, word_in_exception):
         if not isinstance(value, int):
