@@ -32,4 +32,4 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(word_in_exception))
         elif value < 0:
-            raise TypeError("{} must be >= 0".format(word_in_exception))
+            raise ValueError("{} must be >= 0".format(word_in_exception))
