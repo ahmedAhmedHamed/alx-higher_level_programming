@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ this is a rectangle """
 
+
 class Rectangle:
     """ The aforementioned rectangle """
     def __init__(self, width=0, height=0):
@@ -32,4 +33,3 @@ class Rectangle:
             raise TypeError("{} must be an integer".format(word_in_exception))
         elif value < 0:
             raise TypeError("{} must be >= 0".format(word_in_exception))
-
