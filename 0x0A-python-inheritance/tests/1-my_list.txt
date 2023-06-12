@@ -1,0 +1,15 @@
+"""
+>>> MyList = __import__('1-my_list').MyList
+>>> x = MyList([1, 2, 3])
+>>> x[0]
+1
+>>> x.append(2)
+>>> x.print_sorted()
+1
+2
+2
+3
+>>> y = MyList()
+>>> y.print_sorted()
+
+"""
