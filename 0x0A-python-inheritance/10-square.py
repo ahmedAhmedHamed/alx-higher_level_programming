@@ -2,6 +2,7 @@
 """defines a square class inheriting form rectangle"""
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """defines a square class that inherits from rectangle"""
 
