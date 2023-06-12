@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10bbfef8-e4c8-43f5-a184-d1763d04d739" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/6-base_geometry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-base_geometry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/7-base_geometry.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +28,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2R6cpIqUzszU7s2FxTLEgSSTcCW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686574153050</updated>
-      <workItem from="1686574163368" duration="2379000" />
+      <workItem from="1686574163368" duration="2993000" />
     </task>
     <servers />
   </component>
@@ -64,5 +68,6 @@
     <SUITE FILE_PATH="coverage/0x0A_python_inheritance$2_is_same_class.coverage" NAME="2-is_same_class Coverage Results" MODIFIED="1686574953680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/0x0A_python_inheritance$6_base_geometry.coverage" NAME="6-base_geometry Coverage Results" MODIFIED="1686576546330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/0x0A_python_inheritance$4_inherits_from.coverage" NAME="4-inherits_from Coverage Results" MODIFIED="1686575986777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/0x0A_python_inheritance$7_base_geometry.coverage" NAME="7-base_geometry Coverage Results" MODIFIED="1686576804356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
