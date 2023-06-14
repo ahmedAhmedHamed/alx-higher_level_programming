@@ -15,10 +15,8 @@ def pascal_triangle(n):
 
 def create_new_row(array):
     """responsible for creating a single row in the triangle"""
-    length = len(array)
     new_row = [1]
     for i in range(len(array)):
-        number = 0
         if i + 1 < len(array):
             number = array[i] + array[i + 1]
         else:
