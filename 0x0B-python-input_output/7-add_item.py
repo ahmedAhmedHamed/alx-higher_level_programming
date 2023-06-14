@@ -11,7 +11,7 @@ if __name__ == "__main__":
     argv_split = sys.argv[1:]
     json_list = []
     for count, value in enumerate(argv_split):
-        json_list.append(json.dumps(argv_split))
+        json_list.append(argv_split)
     save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
     for i in json_list:
