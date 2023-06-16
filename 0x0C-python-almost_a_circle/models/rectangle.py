@@ -54,6 +54,17 @@ class Rectangle(Base):
     def __str__(self):
         return f"[Rectangle] (f{self.id}) f{self.x}/f{self.y} - f{self.width}/f{self.height}"
 
+    def to_dictionary(self):
+        variables = vars(self)
+        new_dictionary = {
+                            'id': variables['id'],
+                            'width': variables['_Rectangle__width'],
+                            'height': variables['_Rectangle__height'],
+                            'x': variables['_Rectangle__x'],
+                            'Y': variables['_Rectangle__y']
+                          }
+        return new_dictionary
+
     def integer_validator(self, name, value):
         """validates that input is an integer not allowing 0"""
         if not isinstance(value, int):
