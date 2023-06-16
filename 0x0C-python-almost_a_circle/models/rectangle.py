@@ -13,19 +13,32 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def update(self, *args):
-        """updates the rectangle using *args"""
-        for counter, arg in enumerate(args):
-            if counter == 0:
-                self.id = arg
-            elif counter == 1:
-                self.width = arg
-            elif counter == 2:
-                self.height = arg
-            elif counter == 3:
-                self.x = arg
-            elif counter == 4:
-                self.y = arg
+    def update(self, *args, **kwargs):
+        """updates the rectangle using *args and **kwargs"""
+        if args.__len__():
+            for counter, arg in enumerate(args):
+                if counter == 0:
+                    self.id = arg
+                elif counter == 1:
+                    self.width = arg
+                elif counter == 2:
+                    self.height = arg
+                elif counter == 3:
+                    self.x = arg
+                elif counter == 4:
+                    self.y = arg
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
 
     def display(self):
         """displays the rectangle"""
@@ -38,6 +51,8 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
+    def __str__(self):
+        return f"[Rectangle] (f{self.id}) f{self.x}/f{self.y} - f{self.width}/f{self.height}"
 
     def integer_validator(self, name, value):
         """validates that input is an integer not allowing 0"""
@@ -45,7 +60,6 @@ class Rectangle(Base):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be > 0")
-
 
     def x_y_validator(self, name, value):
         """validates that input is an integer allowing 0"""
