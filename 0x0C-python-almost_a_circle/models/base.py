@@ -23,6 +23,26 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """transforms the list_dictionaries to a json"""
-        if list_dictionaries is None or list_dictionaries.__len__() == 0:
+        if list_dictionaries is None or list_dictionaries == []:
             return '"[]"'
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """saves the list_objs array to a file as a json"""
+        if list_objs is None:
+            list_objs = []
+            list_type = list_objs.__class__.__name__
+        else:
+            list_type = list_objs[0].__class__.__name__
+        for counter, obj in enumerate(list_objs):
+            list_objs[counter] = obj.to_dictionary()
+        obj_json = Base.to_json_string(list_objs)
+        with open(str(list_type) + ".json", "w", encoding="utf-8") as file:
+            file.write(obj_json)
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or json_string == "":
+            return []
+        return json.loads(json_string)
