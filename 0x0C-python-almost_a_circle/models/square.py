@@ -10,3 +10,37 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
+    def __str__(self):
+        return f"[Square] (f{self.id}) {self.x}/{self.y} - {self.width}"
+
+    def update(self, *args, **kwargs):
+        """updates the rectangle using *args and **kwargs"""
+        if args.__len__():
+            for counter, arg in enumerate(args):
+                if counter == 0:
+                    self.id = arg
+                elif counter == 1:
+                    self.size = arg
+                elif counter == 2:
+                    self.x = arg
+                elif counter == 3:
+                    self.y = arg
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "size":
+                    self.size = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
+
+    @property
+    def size(self):
+        return self.width * self.width
+
+    @size.setter
+    def size(self, size):
+        self.width = size
+        self.height = size
