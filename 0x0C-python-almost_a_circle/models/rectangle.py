@@ -52,7 +52,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return f"[Rectangle] (f{self.id}) f{self.x}/f{self.y} - f{self.width}/f{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def to_dictionary(self):
         variables = vars(self)
@@ -61,7 +61,7 @@ class Rectangle(Base):
                             'width': variables['_Rectangle__width'],
                             'height': variables['_Rectangle__height'],
                             'x': variables['_Rectangle__x'],
-                            'Y': variables['_Rectangle__y']
+                            'y': variables['_Rectangle__y']
                           }
         return new_dictionary
 
@@ -126,3 +126,12 @@ class Rectangle(Base):
     def area(self):
         """gets the area of the rectangle"""
         return self.height * self.width
+
+if __name__ == "__main__":
+    r1 = Rectangle(3, 5, 1)
+    r1_dictionary = r1.to_dictionary()
+    r2 = Rectangle.create(**r1_dictionary)
+    print(r1)
+    print(r2)
+    print(r1 is r2)
+    print(r1 == r2)
