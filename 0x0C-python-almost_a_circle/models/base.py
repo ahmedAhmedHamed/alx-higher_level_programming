@@ -30,14 +30,15 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """saves the list_objs array to a file as a json"""
+        new_list_objs = list_objs[:]
         if list_objs is None:
-            list_objs = []
+            new_list_objs = []
             list_type = list_objs.__class__.__name__
         else:
             list_type = list_objs[0].__class__.__name__
         for counter, obj in enumerate(list_objs):
-            list_objs[counter] = obj.to_dictionary()
-        obj_json = Base.to_json_string(list_objs)
+            new_list_objs[counter] = obj.to_dictionary()
+        obj_json = Base.to_json_string(new_list_objs)
         with open(str(list_type) + ".json", "w", encoding="utf-8") as file:
             file.write(obj_json)
 
@@ -62,4 +63,8 @@ class Base:
                 all_lines += line.rstrip()
             if all_lines == "":
                 return []
-            return cls.from_json_string(all_lines)
+            dict_array = cls.from_json_string(all_lines)
+            class_array = []
+            for dict_instance in dict_array:
+                class_array.append(cls.create(**dict_instance))
+            return class_array

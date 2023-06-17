@@ -32,12 +32,11 @@ if __name__ == "__main__":
 
     list_squares_output = Square.load_from_file()
 
+
     for square in list_squares_input:
         print("[{}] {}".format(id(square), square))
 
     print("---")
-    print(Rectangle(1, 2))
-    print("----")
 
     for square in list_squares_output:
         print("[{}] {}".format(id(square), square))
