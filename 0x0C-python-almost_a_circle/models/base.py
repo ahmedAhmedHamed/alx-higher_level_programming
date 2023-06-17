@@ -52,3 +52,14 @@ class Base:
         dummy_class = cls(1, 2, id=9898)
         dummy_class.update(**dictionary)
         return dummy_class
+
+    @classmethod
+    def load_from_file(cls):
+        class_name = cls.__name__
+        with open(class_name + ".json", "r", encoding="utf-8") as file:
+            all_lines = ""
+            for line in file:
+                all_lines += line.rstrip()
+            if all_lines == "":
+                return []
+            return cls.from_json_string(all_lines)

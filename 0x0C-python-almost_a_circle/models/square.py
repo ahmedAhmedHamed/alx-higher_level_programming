@@ -42,7 +42,7 @@ class Square(Rectangle):
                             'id': variables['id'],
                             'size': variables['_Rectangle__width'],
                             'x': variables['_Rectangle__x'],
-                            'Y': variables['_Rectangle__y']
+                            'y': variables['_Rectangle__y']
                           }
         return new_dictionary
 
