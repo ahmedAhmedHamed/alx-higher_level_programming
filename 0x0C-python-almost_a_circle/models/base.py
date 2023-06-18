@@ -36,9 +36,12 @@ class Base:
             list_type = list_objs.__class__.__name__
         else:
             list_type = list_objs[0].__class__.__name__
+
         for counter, obj in enumerate(list_objs):
             new_list_objs[counter] = obj.to_dictionary()
+
         obj_json = Base.to_json_string(new_list_objs)
+
         with open(str(list_type) + ".json", "w", encoding="utf-8") as file:
             file.write(obj_json)
 
