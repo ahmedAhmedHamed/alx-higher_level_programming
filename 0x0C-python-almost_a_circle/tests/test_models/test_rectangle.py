@@ -83,3 +83,28 @@ class TestBase(unittest.TestCase):
     def test_rectangle_str(self):
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(r1.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+
+    def test_rectangle_update_args(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(98, 19, 2, 3, 4)
+        self.assertEqual(r1.id, 98)
+        self.assertEqual(r1.width, 19)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+        self.assertEqual(r1.y, 4)
+
+    def test_rectangle_update_kwargs(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(y=1, width=2, x=3, id=89, height=30)
+        self.assertEqual(r1.y, 1)
+        self.assertEqual(r1.x, 3)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.height, 30)
+        self.assertEqual(r1.width, 2)
+
+    def test_rectangle_to_dictionary(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1_dictionary = r1.to_dictionary()
+        dictionary = {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
+        self.assertEqual(r1_dictionary, dictionary)
+
