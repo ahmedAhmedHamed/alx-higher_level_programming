@@ -2,15 +2,18 @@
 """module for square class that inherits from rectangle"""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """a square is a special case of a rectangle,
     this class implements this special case.
     """
 
     def __init__(self, size, x=0, y=0, id=None):
+        """initialises the square"""
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """returns the string representation of a square"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     def update(self, *args, **kwargs):
@@ -37,6 +40,7 @@ class Square(Rectangle):
                     self.y = value
 
     def to_dictionary(self):
+        """returns the square as a dictionary"""
         variables = vars(self)
         new_dictionary = {
                             'id': variables['id'],
@@ -48,9 +52,11 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """returns the size of the square"""
         return self.width * self.width
 
     @size.setter
     def size(self, size):
+        """sets the size of the square"""
         self.width = size
         self.height = size
