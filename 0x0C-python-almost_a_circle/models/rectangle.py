@@ -7,6 +7,7 @@ class Rectangle(Base):
     """rectangle class that inherits from base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """initialises a rectangle"""
         self.width = width
         self.height = height
         self.x = x
@@ -52,9 +53,11 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """returns the class's representation as a string"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def to_dictionary(self):
+        """returns the rectangle as a dictionary"""
         variables = vars(self)
         new_dictionary = {
                             'id': variables['id'],
