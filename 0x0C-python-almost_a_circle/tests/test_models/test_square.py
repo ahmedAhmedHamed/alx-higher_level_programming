@@ -70,8 +70,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(s1.__str__(), "[Square] (2) 0/0 - 5")
 
     def test_square_to_dictionary(self):
-        """tests the to dictionary function"""
-        s1 = Square(10, 2, 1)
+        """tests the square to dictionary function"""
+        s1 = Square(10, 2, 1, 99)
         s1_dictionary = s1.to_dictionary()
-        dictionary = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
+        dictionary = {'id': 99, 'x': 2, 'size': 10, 'y': 1}
         self.assertEqual(s1_dictionary, dictionary)
