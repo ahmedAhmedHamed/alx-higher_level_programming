@@ -53,7 +53,11 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dummy_class = cls(1, 2, id=9898)
+        if cls.__name__ == 'Square':
+            dummy_class = cls(3)
+        if cls.__name__ == 'Rectangle':
+            dummy_class = cls(3, 3)
+
         dummy_class.update(**dictionary)
         return dummy_class
 
