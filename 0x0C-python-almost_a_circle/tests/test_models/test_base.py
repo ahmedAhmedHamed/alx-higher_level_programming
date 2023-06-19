@@ -58,12 +58,18 @@ class TestBase(unittest.TestCase):
         self.assertTrue(isinstance(base, Base))
 
     def test_dictionary_to_json_string_none(self):
+        """tests using to json string with none arg"""
         self.assertEqual(Base.to_json_string(None), '"[]"')
 
     def test_dictionary_to_json_string_empty(self):
+        """tests using to json string with empty arr arg"""
         self.assertEqual(Base.to_json_string([]), '"[]"')
 
     def test_dictionary_to_json_string_correct(self):
-        json_dictionary = Base.to_json_string([{'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}])
-        self.assertEqual(json_dictionary, '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]')
+        """tests using to json string with dict arg"""
+        json_dictionary = Base.to_json_string(
+            [{'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}])
+        self.assertEqual(
+            json_dictionary,
+            '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]')
 
