@@ -63,9 +63,11 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """saves to csv"""
         pass
     @classmethod
     def load_from_file_csv(cls):
+        """loads from csv"""
         pass
 
     @classmethod
