@@ -60,3 +60,5 @@ class Square(Rectangle):
         """sets the size of the square"""
         self.width = size
         self.height = size
+        super().width = size
+        super().height = size
