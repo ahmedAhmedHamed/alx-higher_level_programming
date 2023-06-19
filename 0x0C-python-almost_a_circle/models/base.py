@@ -62,6 +62,13 @@ class Base:
         return dummy_class
 
     @classmethod
+    def save_to_file_csv(cls, list_objs):
+        pass
+    @classmethod
+    def load_from_file_csv(cls):
+        pass
+
+    @classmethod
     def load_from_file(cls):
         class_name = cls.__name__
         with open(class_name + ".json", "r", encoding="utf-8") as file:
