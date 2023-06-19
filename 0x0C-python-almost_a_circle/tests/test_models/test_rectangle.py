@@ -123,7 +123,7 @@ class TestBase(unittest.TestCase):
 
     def test_rectangle_to_dictionary(self):
         """tests to dictionary function"""
-        r1 = Rectangle(10, 2, 1, 9)
+        r1 = Rectangle(10, 2, 1, 9, 1)
         r1_dictionary = r1.to_dictionary()
         dictionary = {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
         self.assertEqual(r1_dictionary, dictionary)
