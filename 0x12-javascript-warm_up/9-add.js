@@ -1,7 +1,7 @@
 #!/usr/bin/node
 import { argv } from 'node:process';
 function add (a, b) {
-  return a + b;
+  return parseInt(a) + parseInt(b);
 }
 
 if (!isNaN(argv[2] && !isNaN(argv[3]))) {
