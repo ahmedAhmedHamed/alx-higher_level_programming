@@ -1,6 +1,7 @@
 #!/usr/bin/node
 const languages = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-
-languages.forEach((val) => {
-  console.log(val);
-});
+let x = 0;
+while (x !== 3) {
+  console.log(languages[x]);
+  x++;
+}
