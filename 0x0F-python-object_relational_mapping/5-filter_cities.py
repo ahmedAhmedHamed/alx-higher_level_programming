@@ -26,6 +26,8 @@ if __name__ == "__main__":
              ' ORDER BY cities.id ASC').format(state_name_searched)
     cur.execute(query)
     rows = cur.fetchall()
+    if len(rows) == 0:
+        print()
     for index, row in enumerate(rows):
         if index == len(rows) - 1:
             print(row[0])
