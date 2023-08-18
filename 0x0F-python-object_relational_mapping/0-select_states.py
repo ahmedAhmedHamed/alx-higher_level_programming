@@ -20,6 +20,6 @@ if __name__ == "__main__":
     cur.execute("SELECT name FROM states ORDER BY id ASC")
     rows = cur.fetchall()
     for index, row in enumerate(rows):
-        print(row)
+        print(f"({index + 1}, '{row[0]}')")
     cur.close()
     db.close()
