@@ -20,6 +20,6 @@ if __name__ == "__main__":
     cur.execute("SELECT name FROM states")
     rows = cur.fetchall()
     for index, row in enumerate(rows):
-        print(f"({index}, {row[0]})")
+        print(f"({index + 1}, {row[0]})")
     cur.close()
     db.close()
