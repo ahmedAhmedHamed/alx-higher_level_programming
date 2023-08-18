@@ -12,9 +12,9 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     db_name = argv[3]
-    engine = create_engine(f"mysql+mysqldb://{username}:{password}"
-                           f"@localhost:3306/{db_name}", echo=True)
+    db_uri = f"mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}"
+    engine = create_engine(db_uri)
     with Session(engine) as session:
         stmt = select(State)
         for state in session.scalars(stmt):
-            print(state)
+            print(f"{state.id}: {state.name}")
