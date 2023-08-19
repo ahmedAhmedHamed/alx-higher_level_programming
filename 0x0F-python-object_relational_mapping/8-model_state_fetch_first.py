@@ -2,10 +2,10 @@
 """
 this module houses the model_state class
 """
-from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
-from sys import argv
-from model_state import Base, State
+# from sqlalchemy import create_engine
+# from sqlalchemy.orm import Session
+# from sys import argv
+# from model_state import Base, State
 
 if __name__ == "__main__":
     """
