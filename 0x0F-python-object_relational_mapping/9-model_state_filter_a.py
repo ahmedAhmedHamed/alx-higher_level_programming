@@ -17,7 +17,9 @@ if __name__ == "__main__":
     db_uri = f"mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}"
     engine = create_engine(db_uri)
     with Session(engine) as session:
-        results = session.query(State).filter(State.name.contains('a')).order_by(State.id).all()
+        results = session.query(State
+                                ).filter(State.name.contains('a')
+                                         ).order_by(State.id).all()
 
         for result in results:
             print(f"{result.id}: {result.name}")
