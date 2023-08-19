@@ -9,7 +9,7 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     """
-    root password hbtn_0e_0_usa
+    root password hbtn_0e_0_usa Texas
     """
     username = argv[1]
     password = argv[2]
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     with Session(engine) as session:
         results = session.query(State
                                 ).where(
-            State.name.any == safe_state_name_searched)
+            State.name == safe_state_name_searched)
 
         for result in results:
             print(f"{result.id}: {result.name}")
