@@ -23,5 +23,7 @@ if __name__ == "__main__":
                                 ).where(
             State.name == safe_state_name_searched)
 
+        if not results.all():
+            print("Not found")
         for result in results:
-            print(f"{result.id}: {result.name}")
+            print(f"{result.id}")
