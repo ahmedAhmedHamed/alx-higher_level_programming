@@ -7,6 +7,7 @@ from model_state import Base, State
 from sqlalchemy import Column, Integer, String
 from sqlalchemy import ForeignKey
 
+
 class City(Base):
     """state class, same as in table"""
     __tablename__ = 'cities'
