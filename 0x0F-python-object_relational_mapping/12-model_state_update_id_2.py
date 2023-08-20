@@ -17,9 +17,9 @@ if __name__ == "__main__":
     db_name = argv[3]
     db_uri = f"mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}"
     engine = create_engine(db_uri)
-    conn = engine.connect()
-    stmt = State.update(). \
-        values(name="new_mexico"). \
-        where(State.id == 2)
-    conn.execute(stmt)
-    conn.close()
+    with Session(bind=engine) as session:
+        (session.query(State).
+         filter(State.id == 2).
+         update({"name": "New Mexico"})
+         )
+        session.commit()
