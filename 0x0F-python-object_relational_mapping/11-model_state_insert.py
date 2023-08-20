@@ -5,7 +5,6 @@ this module houses the model_state class
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sys import argv
-from sqlalchemy import insert
 from model_state import Base, State
 
 if __name__ == "__main__":
@@ -22,5 +21,4 @@ if __name__ == "__main__":
         session.add(new_state)
         session.commit()
         print(new_state.id)
-
 
