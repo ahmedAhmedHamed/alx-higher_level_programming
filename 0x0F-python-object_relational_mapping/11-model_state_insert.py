@@ -10,7 +10,7 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     """
-    root password hbtn_0e_0_usa Texas
+    root password hbtn_0e_0_usa
     """
     username = argv[1]
     password = argv[2]
@@ -18,10 +18,9 @@ if __name__ == "__main__":
     db_uri = f"mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}"
     engine = create_engine(db_uri)
     with Session(engine) as session:
-        stmt = (
-            insert(State).
-            values(name="Louisiana")
-        )
-        print(stmt)
+        new_state = State(name="louisiana")
+        session.add(new_state)
+        session.commit()
+        print(new_state.id)
 
 
