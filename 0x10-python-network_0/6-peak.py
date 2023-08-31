@@ -15,7 +15,7 @@ def find_peak(list_of_integers):
     [(4, 3, 2, 5,) (1, 5, 4, 6)] start 3, cmp i&i + 4
     3-7
     CMP * 2 every loop
- 
+
     N = 7
     [5, 4, 3, 2, 1, 6, 5, 4]
     0-1, 2-3, 4-5, 6-OUT OF INDEX
