@@ -1,12 +1,12 @@
 #!/usr/bin/node
-const request_module = require('request');
+const requestModule = require('request');
 
 try {
-    let request_url = "https://swapi-api.alx-tools.com/api/films/" + process.argv[2];
-    request_module(request_url, (error, response) => {
-        console.log(JSON.parse(response.body)['title'])
-    });
-}
-catch (e) {
+  const requestUrl = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
+  requestModule(requestUrl, (error, response) => {
+    console.log(JSON.parse(response.body).title);
+    if (error) console.error(error);
+  });
+} catch (e) {
   console.error(e);
 }
