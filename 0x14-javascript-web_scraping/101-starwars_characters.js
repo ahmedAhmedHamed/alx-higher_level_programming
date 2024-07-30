@@ -13,6 +13,7 @@ async function main () {
           const characterDetails = JSON.parse(response.body);
           console.log(characterDetails.name);
         });
+        setTimeout(() => {}, 200);
       }
     });
   } catch (e) {
