@@ -1,23 +1,23 @@
 #!/usr/bin/node
-const request_module = require('request');
+const requestModule = require('request');
 
-async function main() {
-    try {
-        let request_url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
-        await request_module(request_url, async (error, response) => {
-            let movie = JSON.parse(response.body);
-            for (const character_url of movie['characters']) {
-                await request_module(character_url, (error, response) => {
-                    let character_details = JSON.parse(response.body);
-                    console.log(character_details["name"]);
-                });
-            }
+async function main () {
+  try {
+    const requestUrl = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
+    await requestModule(requestUrl, async (error, response) => {
+      if (error) console.error(error);
+      const movie = JSON.parse(response.body);
+      for (const characterUrl of movie.characters) {
+        await requestModule(characterUrl, (error, response) => {
+          if (error) console.error(error);
+          const characterDetails = JSON.parse(response.body);
+          console.log(characterDetails.name);
         });
-    }
-    catch (e) {
-        console.error(e);
-    }
+      }
+    });
+  } catch (e) {
+    console.error(e);
+  }
 }
-
 
 main();
