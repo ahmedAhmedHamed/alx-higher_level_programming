@@ -1,9 +1,8 @@
 #!/usr/bin/node
-const request_module = require('request');
+const requestModule = require('request');
 
 try {
-  request_module(process.argv[2], (error, response) => {console.log(response.statusCode)});
-}
-catch (e) {
+  requestModule(process.argv[2], (response) => { console.log(response.statusCode); });
+} catch (e) {
   console.error(e);
 }
