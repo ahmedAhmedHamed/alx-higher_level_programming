@@ -1,26 +1,25 @@
 #!/usr/bin/node
-const request_module = require('request');
-
+const requestModule = require('request');
 
 try {
-    let request_url = process.argv[2];
-    request_module(request_url, (error, response) => {
-        let req_json = JSON.parse(response.body);
-        let num_tasks_completed_per_user = {};
-        req_json.forEach(task_details => {
-            let user_id = task_details["userId"];
-            let completion_status = task_details["completed"];
-            if (completion_status) {
-                if (num_tasks_completed_per_user.hasOwnProperty(user_id)) {
-                    num_tasks_completed_per_user[user_id]++;
-                } else {
-                    num_tasks_completed_per_user[user_id] = 1;
-                }
-            }
-        });
-        console.log(num_tasks_completed_per_user);
+  const requestUrl = process.argv[2];
+  requestModule(requestUrl, (error, response) => {
+    if (error) console.error(error);
+    const requestJson = JSON.parse(response.body);
+    const numTasksCompletedPerUser = {};
+    requestJson.forEach(taskDetails => {
+      const userId = taskDetails.userId;
+      const completionStatus = taskDetails.completed;
+      if (completionStatus) {
+        if (userId in numTasksCompletedPerUser) {
+          numTasksCompletedPerUser[userId]++;
+        } else {
+          numTasksCompletedPerUser[userId] = 1;
+        }
+      }
     });
-}
-catch (e) {
+    console.log(numTasksCompletedPerUser);
+  });
+} catch (e) {
   console.error(e);
 }
