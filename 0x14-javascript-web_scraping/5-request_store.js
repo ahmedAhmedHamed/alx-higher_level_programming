@@ -1,16 +1,15 @@
 #!/usr/bin/node
-const request_module = require('request');
+const requestModule = require('request');
 const fs = require('fs');
 
-
-let body_to_be_written = undefined;
+let bodyToBeWritten;
 try {
-    let request_url = process.argv[2];
-    request_module(request_url, (error, response) => {
-        body_to_be_written = response.body;
-        fs.writeFileSync(process.argv[3], body_to_be_written, {encoding: 'utf8'});
-    });
-}
-catch (e) {
+  const requestUrl = process.argv[2];
+  requestModule(requestUrl, (error, response) => {
+    bodyToBeWritten = response.body;
+    if (error) console.error(error);
+    fs.writeFileSync(process.argv[3], bodyToBeWritten, { encoding: 'utf8' });
+  });
+} catch (e) {
   console.error(e);
 }
